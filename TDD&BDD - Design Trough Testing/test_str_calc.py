@@ -23,5 +23,9 @@ class TestStrCalc(unittest.TestCase):
         """Testing Scenario 4:"""
         self.assertEqual(6, Calculator().add("1\n2, 3"))
 
+    def test_should_return_sum_of_multiple_numbers_with_user_defined_delimiter(self):
+        """Testing Scenario 5:"""
+        self.assertEqual(3, Calculator().add("//;\n1;2", "//|;|\n"))
+
 
 unittest.main()
