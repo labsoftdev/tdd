@@ -11,5 +11,9 @@ class TestStrCalc(unittest.TestCase):
         """Testing scenario 1:"""
         self.assertEqual(0, Calculator().add(""))
 
+    def test_should_return_value_for_single_number(self):
+        """Testing scenario 2:"""
+        self.assertEqual(5, Calculator().add("5"))
+
 
 unittest.main()
