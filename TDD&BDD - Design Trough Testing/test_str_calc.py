@@ -15,5 +15,9 @@ class TestStrCalc(unittest.TestCase):
         """Testing scenario 2:"""
         self.assertEqual(5, Calculator().add("5"))
 
+    def test_should_return_sum_of_multiple_numbers(self):
+        """Testing Scenario 3:"""
+        self.assertEqual(3, Calculator().add("1, 2"))
+
 
 unittest.main()

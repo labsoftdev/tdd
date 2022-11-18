@@ -6,7 +6,9 @@ class Calculator:
 
     def add(self, calc):
         """Returns the sum of numbers in the input"""
-        if calc == "":
-            return 0
-
-        return int(calc)
+        ret_val = 0
+        if calc != "":
+            values = calc.split(", ")
+            for value in values:
+                ret_val += int(value)
+        return ret_val
