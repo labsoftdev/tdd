@@ -17,7 +17,7 @@ class Calculator:
             values = self.get_values(calc, delimiter)
             for value in values:
                 if int(value) < 0:
-                    raise NegativeNumberException
+                    raise NegativeNumberException("Passed negative number!")
                 ret_val += int(value)
         return ret_val
 

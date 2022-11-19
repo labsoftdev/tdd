@@ -31,3 +31,8 @@
 **Given**: the user would like to calculate the result passed in string format. <br>
 **When**: input is negative number. <br>
 **Then**: calculator should rise an exception. <br>
+
+## Scenario_7:
+**Given**: the user would like to calculate the result passed in string format.. <br>
+**When**: input is negative number. <br>
+**Then**: calculator should rise an exception with explanation. <br>

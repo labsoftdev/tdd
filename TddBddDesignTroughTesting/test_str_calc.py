@@ -33,6 +33,14 @@ class TestStrCalc(unittest.TestCase):
         """Testing Scenario 6:"""
         self.assertRaises(NegativeNumberException, Calculator().add, "-1")
 
+    def test_should_generate_an_exception_for_negative_number_with_explanation(
+        self,
+    ):
+        """Testing Scenario 7:"""
+        with self.assertRaises(NegativeNumberException) as context:
+            Calculator().add("-1")
+        assert "Passed negative number!" == str(context.exception)
+
 
 if __name__ == "__main__":
     unittest.main()  # pragma: no cover
