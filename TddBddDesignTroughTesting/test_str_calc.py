@@ -1,7 +1,7 @@
 """Testing module fpr String Calculator"""
 
 import unittest
-from str_calc import Calculator
+from str_calc import Calculator, NegativeNumberException
 
 
 class TestStrCalc(unittest.TestCase):
@@ -26,6 +26,12 @@ class TestStrCalc(unittest.TestCase):
     def test_should_return_sum_of_multiple_numbers_with_user_defined_delimiter(self):
         """Testing Scenario 5:"""
         assert 3 == Calculator().add("//;\n1;2", "//|;|\n")
+
+    def test_should_generate_an_exception_for_negative_number(
+        self,
+    ):
+        """Testing Scenario 6:"""
+        self.assertRaises(NegativeNumberException, Calculator().add, "-1")
 
 
 if __name__ == "__main__":

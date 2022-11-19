@@ -16,5 +16,11 @@ class Calculator:
         if calc != "":
             values = self.get_values(calc, delimiter)
             for value in values:
+                if int(value) < 0:
+                    raise NegativeNumberException
                 ret_val += int(value)
         return ret_val
+
+
+class NegativeNumberException(Exception):
+    """Rise exception if the negative number was passed"""
