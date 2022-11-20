@@ -26,3 +26,18 @@
 **Given**: the user would like to calculate the result passed in string format. <br>
 **When**: input is multiple numbers, with delimiters defined by the user. <br>
 **Then**: calculator should return a sum of those numbers. <br>
+
+## Scenario_6:
+**Given**: the user would like to calculate the result passed in string format. <br>
+**When**: input is negative number. <br>
+**Then**: calculator should rise an exception. <br>
+
+## Scenario_7:
+**Given**: the user would like to calculate the result passed in string format. <br>
+**When**: input is negative number. <br>
+**Then**: calculator should rise an exception with explanation. <br>
+
+## Scenario_8:
+**Given**: the user would like to calculate the result passed in string format. <br>
+**When**: addition is performed. <br>
+**Then**: expression and result should be displayed. <br>
