@@ -1,6 +1,7 @@
 """Testing module fpr String Calculator"""
 
 import unittest
+from unittest.mock import MagicMock
 from str_calc import Calculator, NegativeNumberException
 
 
@@ -51,6 +52,14 @@ class TestStrCalc(unittest.TestCase):
         """Test for Scenario_8"""
         self.calc.add("1, 2")
         self.assertEqual("1 + 2 = 3", self.result)
+
+    def test_should_display_expression_and_result_after_calculationa_with_mock(
+        self,
+    ):
+        """Test for Scenario_8"""
+        display = MagicMock()
+        Calculator(display).add("4, 5")
+        display.assert_called_with("4 + 5 = 9")
 
     def _display(self, message):
         self.result = message

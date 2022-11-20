@@ -26,6 +26,7 @@ class Calculator:
         return ret_val
 
     def display_result(self, values, result):
+        """Print and return expression and result of calculation"""
         message = ""
         for value in values:
             if message:
