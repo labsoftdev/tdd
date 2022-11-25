@@ -15,4 +15,7 @@ class Fraction:
         return Fraction(num, den)
 
     def __str__(self) -> str:
-        return str(self.numerator)
+        ret_val = str(self.numerator)
+        if self.denominator != 1:
+            ret_val += "/" + str(self.denominator)
+        return ret_val
