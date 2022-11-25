@@ -16,7 +16,18 @@ class Fraction:
     def __str__(self) -> str:
         ret_val = str(self.numerator)
         if self.denominator != 1:
-            ret_val += "/" + str(self.denominator)
+            if self.numerator < self.denominator:
+                ret_val += "/" + str(self.denominator)
+            elif self.numerator == self.denominator:
+                ret_val = str(int(self.numerator / self.denominator))
+            else:
+                ret_val = (
+                    str(int(self.numerator / self.denominator))
+                    + " "
+                    + str(self.numerator % self.denominator)
+                    + "/"
+                    + str(self.denominator)
+                )
         return ret_val
 
     def _get_numerator(self, other):
