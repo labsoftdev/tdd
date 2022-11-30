@@ -14,4 +14,4 @@ class TestCaseTest(TestCase):
         assert test.was_run
 
 
-TestCaseTest("test_should_invoke_testMethod").run()
+TestCaseTest("test_should_invoke_test_method").run()
