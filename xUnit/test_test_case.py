@@ -13,16 +13,10 @@ class TestCaseTest(TestCase):
     def set_up(self):
         self.test = WasRun("test_method")
 
-    def test_should_invoke_test_method(self):
-        """Scenario 1: test should have been invoked if the test was run"""
+    def test_should_invoke_in_order_setup_test_method_and_tear_down(self):
+        """Testing test running"""
         self.test.run()
-        assert self.test.log == "setUp testMethod"
-
-    def test_should_invoke_setup_if_test_was_run(self):
-        """Scenario 2: setUp should have been invoked if the test was run"""
-        self.test.run()
-        assert self.test.log == "setUp testMethod"
+        assert self.test.log == "setUp testMethod tearDown"
 
 
-TestCaseTest("test_should_invoke_test_method").run()
-TestCaseTest("test_should_invoke_setup_if_test_was_run").run()
+TestCaseTest("test_should_invoke_in_order_setup_test_method_and_tear_down").run()
