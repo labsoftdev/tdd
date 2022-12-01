@@ -6,7 +6,11 @@ from test_case import TestCase
 class TestCaseTest(TestCase):
     """Test class for TestCase"""
 
-    def setUp(self):
+    def __init__(self, name):
+        self.test = None
+        TestCase.__init__(self, name)
+
+    def set_up(self):
         self.test = WasRun("test_method")
 
     def test_should_invoke_test_method(self):
