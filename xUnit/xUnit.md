@@ -29,3 +29,9 @@
 **Given**: user created a test case and a tearDown. <br>
 **When**: user launch a test case and test fails. <br>
 **Then**: tearDown should be invoked. <br>
+
+## Scenario_6: Report collected result
+
+**Given**: user created a test case and a tearDown. <br>
+**When**: user launch a test case and test fails. <br>
+**Then**: tearDown should be invoked. <br>

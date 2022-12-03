@@ -18,3 +18,6 @@ class WasRun(TestCase):
 
     def tear_down(self):
         self.log += " tearDown"
+
+    def failing_test_method(self):
+        raise Exception
