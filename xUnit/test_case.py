@@ -22,7 +22,11 @@ class TestCase:
         try:
             method = getattr(self, self.name)
             method()
-        except:
+        except TestFailed:
             result.test_failed()
         self.tear_down()
         return result
+
+
+class TestFailed(Exception):
+    """Test failure exception"""

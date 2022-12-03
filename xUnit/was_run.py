@@ -1,5 +1,5 @@
 """Module for test case implementation"""
-from test_case import TestCase
+from test_case import TestCase, TestFailed
 
 
 class WasRun(TestCase):
@@ -20,4 +20,5 @@ class WasRun(TestCase):
         self.log += " tearDown"
 
     def failing_test_method(self):
-        raise Exception
+        """Broken test method"""
+        raise TestFailed

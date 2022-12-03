@@ -25,6 +25,7 @@ class TestCaseTest(TestCase):
         assert result.summary() == "1 run, 0 failed"
 
     def test_should_return_that_one_test_failed(self):
+        """Testing test summary format"""
         result = TestResult()
         result.test_started()
         result.test_failed()

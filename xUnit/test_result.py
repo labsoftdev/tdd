@@ -6,7 +6,7 @@ class TestResult:
 
     def __init__(self):
         self.run_count = 0
-        self.errorCount = 0
+        self.error_count = 0
 
     def test_started(self):
         """Test started"""
@@ -14,8 +14,8 @@ class TestResult:
 
     def test_failed(self):
         """Test failed"""
-        self.errorCount = self.errorCount + 1
+        self.error_count += 1
 
     def summary(self):
         """Return test result summary"""
-        return f"{self.run_count} run, {self.errorCount} failed"
+        return f"{self.run_count} run, {self.error_count} failed"
