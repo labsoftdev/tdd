@@ -14,9 +14,8 @@ class TestCase:
     def tear_down(self):
         """Clean after TestCase"""
 
-    def run(self):
+    def run(self, result):
         """Run method that is passed in constructor"""
-        result = TestResult()
         result.test_started()
         self.set_up()
         try:
@@ -25,7 +24,6 @@ class TestCase:
         except TestFailed:
             result.test_failed()
         self.tear_down()
-        return result
 
 
 class TestFailed(Exception):

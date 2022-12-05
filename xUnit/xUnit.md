@@ -32,6 +32,12 @@
 
 ## Scenario_6: Report collected result
 
-**Given**: user created a test case and a tearDown. <br>
-**When**: user launch a test case and test fails. <br>
-**Then**: tearDown should be invoked. <br>
+**Given**: user created a test case. <br>
+**When**: user launch a test case. <br>
+**Then**: test result should be generated. <br>
+
+## Scenario_7: Run multiple tests
+
+**Given**: user created a multiple test cases. <br>
+**When**: user run them. <br>
+**Then**: summary of tests run should be displayed. <br>
