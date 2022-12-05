@@ -1,5 +1,5 @@
 """Module for test case implementation"""
-from test_case import TestCase, TestFailed
+from test_case import TestCase
 
 
 class WasRun(TestCase):
@@ -21,4 +21,4 @@ class WasRun(TestCase):
 
     def failing_test_method(self):
         """Broken test method"""
-        raise TestFailed
+        raise AssertionError

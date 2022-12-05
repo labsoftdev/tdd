@@ -1,5 +1,4 @@
 """TestCase module"""
-from test_result import TestResult
 
 
 class TestCase:
@@ -17,14 +16,10 @@ class TestCase:
     def run(self, result):
         """Run method that is passed in constructor"""
         result.test_started()
-        self.set_up()
         try:
+            self.set_up()
             method = getattr(self, self.name)
             method()
-        except TestFailed:
+        except:
             result.test_failed()
         self.tear_down()
-
-
-class TestFailed(Exception):
-    """Test failure exception"""
